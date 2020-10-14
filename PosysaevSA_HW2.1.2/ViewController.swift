@@ -9,11 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var redView: UIView!
+    @IBOutlet weak var yellowView: UIView!
+    @IBOutlet weak var greenView: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        startButton.layer.cornerRadius = 12
+        
     }
 
 
+    @IBAction func startBtn() {
+        
+    }
 }
 
