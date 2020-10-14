@@ -13,7 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var redView: UIView!
     @IBOutlet weak var yellowView: UIView!
     @IBOutlet weak var greenView: UIView!
-    var start = false
+    private var start = false
+    private var count = 1
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +27,32 @@ class ViewController: UIViewController {
 
 
     @IBAction func startBtn() {
+        
         if !start {
             startButton.setTitle("NEXT", for: .normal)
-            redView.alpha = 1
             start = true
         }
         
+        if count == 1 {
+            redView.alpha = 1.0
+            yellowView.alpha = 0.3
+            greenView.alpha = 0.3
+            count += 1
+        }
+        if count == 2 {
+            redView.alpha = 0.3
+            yellowView.alpha = 1.0
+            greenView.alpha = 0.3
+            count += 1
+        }
+        if count == 3 {
+            redView.alpha = 0.3
+            yellowView.alpha = 0.3
+            greenView.alpha = 1.0
+        }
+        if count == 3 {
+            count = 1
+        }
         
         
     }
